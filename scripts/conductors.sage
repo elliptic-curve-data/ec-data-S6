@@ -10,6 +10,9 @@ with open("../data/curves_data__S_2_3_5_7_11_13.txt" , "r") as fp:
 
 H = histogram(data, bins= 150, color="#444488", linewidth=0)
 
+log_N_Cremona = log(500000.0)
+cremona_line = line2d([(log_N_Cremona,-5000),(log_N_Cremona,10^5)],linestyle="--",rgbcolor="#666")
+H += cremona_line
 
 H.show(dpi=400, transparent=True, typeset="latex", fontsize=16)
 H.save("cond.svg", dpi=400, transparent=True, typeset="latex", fontsize=16)
