@@ -6,12 +6,12 @@ with open("../data/curves_data__S_2_3_5_7_11_13.txt" , "r") as fp:
         data += [float(log(RR(ZZ(disc).abs()))/log(RR(ZZ(cond))))]
         i += 1
         if i % 1000 == 0:
-            print i
+            print(i)
 
-H = histogram(data, bins= 100)
+H = histogram(data, bins= 100, color="#444488", linewidth=0)
 
 
-H.show(dpi=400, transparent=True)
-H.save("cond.svg", dpi=400, transparent=True)
-H.save("cond.pdf", dpi=400, transparent=True)
+H.show(dpi=400, transparent=True, typeset="latex", fontsize=16)
+H.save("szpiro_ratio.svg", dpi=400, transparent=True, typeset="latex", fontsize=16)
+H.save("szpiro_ratio.pdf", dpi=400, transparent=True, typeset="latex", fontsize=16)
 
