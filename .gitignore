@@ -1,2 +1,6 @@
 # SageMath parsed files 
 *.sage.py
+
+#unzipped data files
+data/curves__S_2_3_5_7_11_13.txt
+data/curves_data__S_2_3_5_7_11_13.txt
