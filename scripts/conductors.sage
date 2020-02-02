@@ -8,7 +8,7 @@ with open("../data/curves_data__S_2_3_5_7_11_13.txt" , "r") as fp:
         if i % 1000 == 0:
             print(i)
 
-H = histogram(data, bins= 150, color="#444488", linewidth=0)
+H = histogram(data, bins= 150, color="#444488", edgecolor="#444488", linewidth=0.3)
 
 log_N_Cremona = log(500000.0)
 cremona_line = line2d([(log_N_Cremona,-5000),(log_N_Cremona,10^5)],linestyle="--",rgbcolor="#666")
