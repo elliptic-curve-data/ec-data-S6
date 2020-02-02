@@ -8,10 +8,10 @@ with open("../data/curves_data__S_2_3_5_7_11_13.txt" , "r") as fp:
         if i % 1000 == 0:
             print(i)
 
-H = histogram(data, bins= 100, color="#444488", edgecolor="#444488", linewidth=0.3)
+H = histogram(data, bins= 100, color="#444488", edgecolor="#444488", linewidth=1)
 
 
 H.show(dpi=400, transparent=True, typeset="latex", fontsize=16)
-H.save("szpiro_ratio.svg", dpi=400, transparent=True, typeset="latex", fontsize=16)
-H.save("szpiro_ratio.pdf", dpi=400, transparent=True, typeset="latex", fontsize=16)
+H.save("../img/szpiro_ratio.svg", dpi=400, transparent=True, typeset="latex", fontsize=16)
+H.save("../img/szpiro_ratio.pdf", dpi=400, transparent=True, typeset="latex", fontsize=16)
 
