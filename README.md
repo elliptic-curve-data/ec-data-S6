@@ -16,6 +16,11 @@ Proving completeness with our method should take about 50 more CPU years.
 
 Alex J. Best, Benjamin Matschke.
 
+### Contributions
+
+Edgar Costa: 
+ - Analytic ranks and leading term of L-functions at 1/2 for all curves in the table.
+
 ### License
 
 Creative Commons BY-NC 4.0.

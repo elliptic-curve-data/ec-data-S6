@@ -12,7 +12,7 @@ This folder contains all of this project's data that is related to M(S(6)), the 
  
  - [curves_data__S_2_3_5_7_11_13.zip](curves_data__S_2_3_5_7_11_13.zip) is as [curves__S_2_3_5_7_11_13.zip](curves__S_2_3_5_7_11_13.zip), except that each line of the contained text file is of the form `c4,c6,Delta,j,N`, where c4 and c6 are as before, Delta is the global minimal discriminant of E, j the j-invariant of E, and N the conductor of E. 
 
- - [curves_data_rank_cond_disc_S_2_3_5_7_11_13.txt.xz](curves_data_rank_cond_disc_S_2_3_5_7_11_13.txt.xz) decompresses to a text file curves__S_2_3_5_7_11_13.txt in cvs format (comma separated values), where each line is of the form `c4,c6,conductor,disc,rank,leading,root `, where rank is the analytic rank of E, the leading term is L^(rank)(1/2)/rank!, and root is the root number in the functional equation. The lines are ordered by `(conductor,disc,c4,c6)`.
+ - [curves_data_rank_cond_disc_S_2_3_5_7_11_13.txt.xz](curves_data_rank_cond_disc_S_2_3_5_7_11_13.txt.xz) decompresses to a text file curves_data_rank_cond_disc_S_2_3_5_7_11_13.txt in cvs format (comma separated values), where each line is of the form `c4,c6,conductor,disc,rank,leading,root`, where rank is the analytic rank of E, the leading term is `L^(rank)(1/2)/rank!`, and root is the root number in the functional equation. The lines are ordered by `(conductor,disc,c4,c6)`.
 
  - [mwMordellS6.sobj](mwMordellS6.sobj) is a sage object file that contains Mordell-Weil bases of Mordell curves, that were used to compute the table M(S(6)).
    The Mordell curves are of the form `E_a: y^2 = x^3 + a`, where a is an integer of the form `+/- prod_{p in S} p^{a_p}` with `0 <= a_p <= 5`.
@@ -29,6 +29,11 @@ Proving completeness with our method should take about 50 more CPU years.
 ### Authors
 
 Alex J. Best, Benjamin Matschke.
+
+### Contributions
+
+Edgar Costa: 
+ - Analytic ranks and leading term of L-functions at 1/2 for all curves in the table.
 
 ### License
 
