@@ -1,3 +1,9 @@
+#The abc data is taken from the ABC@HOME project of Bart de Smit:
+#
+# https://www.math.leidenuniv.nl/~desmit/abc/
+#
+
+#First we parse the html files for abc-triples:
 abcs = []
 #filename = "abc-quality.html"
 #filename = "abc-unbeaten.html"
@@ -23,6 +29,16 @@ with open(filename,"r") as fp:
 					if f == "":
 						continue
 					if f == "BIG":
+						#We omit the abc-triples where one of the
+						#factors is "BIG".
+						#This BIG factor can be computed 
+						#from a+b=c and the other numbers.
+						#However it is not necessarily a prime.
+						#Thus computing rad(a*b*c) would require
+						#a factorization of BIG, which seems
+						#computationally difficult.
+						#So for simplicity we omit them from our
+						#heuristic.
 						break
 					x *= eval(f)
 				#print(x)
@@ -38,6 +54,11 @@ with open(filename,"r") as fp:
 			#break
 #print("abcs:",abcs)
 print("len(abcs):",len(abcs))
+
+#Next, for given eps>0, compute what constant K_eps in 
+#the abc-conjecture we have to take _at least_.
+#If we assume the data of ABC@HOME to be "extremal",
+#this constant might be the correct one.
 eps = 0.1
 #eps = 0.1
 Kepss = []
@@ -50,4 +71,10 @@ for a,b,c in abcs:
 print("max Kepss:",max(Kepss))
 print("log(max(Kepss)):",log(max(Kepss)))
 K = max(Kepss)
-print(RR(2*(2*log(K)+2.2*log(prod(primes_first_n(6))))))
+
+#Finally, compute a height bound for the primitive solutions (x,y) of
+#the $S$-hall equation for S={2,3,...,13} (and D=1).
+#This is thus roughly a bound for the Neron-Tate height of S-integral
+#points of the Mordell curve y^2=x^3+a, where a in ZZ\cap O_S^*
+#with exponents of a bounded by 5.
+print("height bound for S(6):",RR(2*(2*log(K)+2.2*log(prod(primes_first_n(6))))))
