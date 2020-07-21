@@ -6,7 +6,8 @@
    Each curve is given as a tuple (c4, c6), such that a Weierstrass model can be recovered as y^2 = x^3 - 27 c4 x - 54 c6.
  - Mordell-Weil bases of Mordell curves that were used to compute the table.
  - Code for computing the Mordel-Weil bases.
-
+ - The [paper](https://github.com/elliptic-curve-data/ec-data-S6/blob/master/docs/paper.pdf) corresponding to this table. 
+ 
 ### Completeness of the table
 
 The table is likely to be complete, however this is not proved yet.
